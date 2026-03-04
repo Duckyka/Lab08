@@ -1,6 +1,7 @@
 package com.example.lab08;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CustomList {
@@ -8,6 +9,11 @@ public class CustomList {
 
     public CustomList() {
         this.cities = new ArrayList<>();
+    }
+
+    public List<City> getCities() {
+        List<City> list = cities;
+        return list;
     }
 
     public void addCity(City city) {
@@ -20,6 +26,10 @@ public class CustomList {
 
     public void deleteCity(City city) {
         cities.remove(city);
+    }
+
+    public int countCities() {
+        return this.getCities().size();
     }
 
     
